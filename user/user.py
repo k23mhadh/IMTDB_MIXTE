@@ -44,7 +44,6 @@ def get_user_byid(userid):
          return res
    return make_response(jsonify({"error":"User not found"}),400)
 
-#toReplace
 @app.route("/movies", methods=['GET'])
 def get_movies():
    query = """
@@ -94,7 +93,6 @@ def get_booking_info(userId):
    # Fetch movie information for each booked movie
    for movie_id in movies:
       query = f"""
-      
          movie_with_id(_id: "{movie_id}") {{
             id
             title
