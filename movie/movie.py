@@ -12,6 +12,7 @@ type_defs = load_schema_from_path('movie.graphql')
 query = QueryType()
 movie = ObjectType('Movie')
 query.set_field('movie_with_id', r.movie_with_id)
+query.set_field('all_movies', r.all_movies)
 
 # mutation type goes here
 mutation = MutationType()
@@ -31,7 +32,7 @@ def home():
     return make_response("<h1 style='color:blue'>Welcome to the Movie service!</h1>",200)
 
 # graphql entry points
-@app.route('/graphql', methods=['POST'])
+@app.route('/movies/graphql', methods=['POST'])
 def graphql_server():
     # todo to complete
     data = request.get_json()
