@@ -3,9 +3,6 @@
 ## Overview
 This project implements a cinema management system with four microservices: Movie, Booking, Times, and User. This time, some APIs will be written using GraphQL and gRPC, resulting in a mixed API application.
 
-## Setup
-Download the base code repository for the TP: [Base Code Repository](https://github.com/IMTA-FIL/UE-AD-A1-MIXTE).
-
 ### Install Dependencies
 Make sure to install the required dependencies:
 
@@ -18,7 +15,7 @@ Major Changes
 
 -**User Service Modification**: Adapted the User service to send GraphQL requests to the Movie service using the POST method, ensuring compatibility with the new API.
 
--**Times Microservice Development with gRPC**: Created API proto files for the Times service and implemented the service using gRPC. Conducted testing with a gRPC client and Postman.
+-**Times Microservice Development with gRPC**: Created API proto files for the Times service and implemented the service using gRPC. 
 
 -**Booking Microservice Implementation with gRPC**: Developed the Booking service using gRPC by creating the necessary API proto files. Updated the service to replace REST requests to Times with gRPC remote procedure calls, making Booking both a gRPC server and client.
 
